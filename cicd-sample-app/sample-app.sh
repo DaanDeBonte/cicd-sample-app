@@ -1,11 +1,15 @@
 #!/bin/bash
 set -euo pipefail
 
+# Create tempdir if it doesn't exist
 if [ ! -d "tempdir" ]; then
     mkdir tempdir
-    mkdir tempdir/templates
-    mkdir tempdir/static
 fi
+
+# Create subdirectories
+mkdir -p tempdir/templates
+mkdir -p tempdir/static
+
 
 cd cicd-sample-app
 cp sample_app.py tempdir/.
