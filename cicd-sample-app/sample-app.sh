@@ -7,7 +7,7 @@ if [ ! -d "tempdir" ]; then
     mkdir tempdir/static
 fi
 
-
+cd cicd-sample-app
 cp sample_app.py tempdir/.
 cp -r templates/* tempdir/templates/.
 cp -r static/* tempdir/static/.
